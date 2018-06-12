@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="300dp"
+    android:layout_height="300dp">
+
+    <TextView
+        android:id="@+id/loginMailText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="66dp"
+        android:layout_marginTop="44dp"
+        android:textSize="22sp" />
+
+    <EditText
+        android:id="@+id/loginMail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/loginMailText"
+        android:layout_alignBottom="@+id/loginMailText"
+        android:layout_alignStart="@+id/loginPassword"
+        android:ems="7"
+        android:inputType="textEmailAddress" />
+
+    <TextView
+        android:id="@+id/loginPasswordText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/loginMailText"
+        android:layout_below="@+id/loginMail"
+        android:layout_marginTop="22dp"
+        android:textSize="22sp" />
+
+    <EditText
+        android:id="@+id/loginPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="7"
+        android:inputType="textPassword"
+        android:layout_alignBaseline="@+id/loginPasswordText"
+        android:layout_alignBottom="@+id/loginPasswordText"
+        android:layout_toEndOf="@+id/loginPasswordText" />
+
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="12dp"
+        android:layout_marginEnd="17dp"
+        android:text="@string/log" />
+
+    <Button
+        android:id="@+id/loginButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/loginButton"
+        android:layout_marginStart="22dp"
+        android:text="@string/otherLog" />
+</RelativeLayout>

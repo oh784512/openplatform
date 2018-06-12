@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Openplatform_finalproject</string>
+    <string name="sign">Sign Up</string>
+    <string name="log">Log in</string>
+    <string name="otherLog">Other LogIn</string>
+    <!--drawer-->
+    <string name="open">0</string>
+    <string name="close">1</string>
+    <string name="search_title">test search</string>
+
+</resources>
