@@ -21,20 +21,22 @@
             android:layout_marginLeft="40dp"
             android:layout_width="20dp"
             android:layout_height="60dp" />
-        <RelativeLayout
+        <LinearLayout
             android:layout_marginTop="60dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-            <Button
-                android:layout_marginLeft="40dp"
-                android:layout_width="20dp"
-                android:layout_height="60dp" />
+            <TextView
+                android:id="@+id/diaryTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:textStyle="bold"/>
             <com.yarolegovich.discretescrollview.DiscreteScrollView
                 android:id="@+id/picker"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:dsv_orientation="horizontal" />  <!-- orientation is optional, default is horizontal -->
-        </RelativeLayout>
+        </LinearLayout>
     </RelativeLayout>
 
     <!-- The navigation drawer -->

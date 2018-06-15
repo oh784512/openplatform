@@ -2,11 +2,13 @@ package openplatform.openplatform_finalproject;
 
 import android.app.SearchManager;
 import android.content.Context;
+import android.support.annotation.Nullable;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
@@ -23,10 +25,10 @@ import com.yarolegovich.discretescrollview.DiscreteScrollView;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainINTFCActivity extends AppCompatActivity {
+public class MainINTFCActivity extends AppCompatActivity implements DiscreteScrollView.OnItemChangedListener,
+        View.OnClickListener{
 
     Toolbar toolbar;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,11 +68,11 @@ public class MainINTFCActivity extends AppCompatActivity {
 
 
 
-        MyAdapter a = new MyAdapter(4);
-
-        DiscreteScrollView scrollView = findViewById(R.id.picker);
-        scrollView.setAdapter(new YourAdapterImplementation());
-        scrollView.setOffscreenItems(5);
+//        MyAdapter a = new MyAdapter(4);
+//
+//        DiscreteScrollView scrollView = findViewById(R.id.picker);
+//        scrollView.setAdapter(new YourAdapterImplementation());
+//        scrollView.setOffscreenItems(5);
 
     }
 
@@ -93,36 +95,14 @@ public class MainINTFCActivity extends AppCompatActivity {
         return true;
     }
 
-    public class MyAdapter extends BaseAdapter {
-        private ArrayList<Integer> mList;
-        int dispalyLimit;
 
-        public MyAdapter(int n){
-            dispalyLimit = n;
-            mList = new ArrayList<Integer>();
-            for(int i = 0; i < 100; i++){
-                mList.add(i);
-            }
-        }
+    @Override
+    public void onClick(View view) {
 
-        @Override
-        public int getCount() {
-            return mList.size();
-        }
+    }
 
-        @Override
-        public Object getItem(int arg0) {
-            return null;
-        }
+    @Override
+    public void onCurrentItemChanged(@Nullable RecyclerView.ViewHolder viewHolder, int adapterPosition) {
 
-        @Override
-        public long getItemId(int arg0) {
-            return 0;
-        }
-
-        @Override
-        public View getView(int arg0, View arg1, ViewGroup arg2) {
-            return null;
-        }
     }
 }
